@@ -1,0 +1,119 @@
+/* M2LO4 Embedded: Demonstrate external, embedded, and inline styles */
+<@charset="utf-8" />
+
+
+/* Structural Styles */
+
+header {
+ float: left;
+}
+
+body { /* M4LO2 Demonstrate the use of background images */
+    /* M3LO9: Demonstrate fixed, static, or inherited positioning */
+    /* The image is fixed to the window */
+    background: url(background.jpg) 100%/cover fixed;
+    overflow: auto; /* M3LO10: Demonstrate an overflow setting */ /* the window will now only have a scroll bar when needed */
+    -webkit-border-radius: 10px; /* M3LO11: Demonstrate -prefix- style browser extensions use in CSS */ 
+    /* the page has a boder rafius of 10px */
+    margin: 0;    /* M2LO13: Demonstrate how CSS can change presentation of textual elements */
+    padding: 5px 25px 25px 25px;
+
+}
+/* M3LO6: Demonstrate formatting a grid */
+    /* A grid has been defined for the html. */
+/* html { 
+    display: grid;
+    grid-template-rows: 100px auto 100px;
+    grid-template-columns: 25% 50% 25%;
+} */
+
+img { /* M3LO2: Demonstrate floating elements */ 
+    /* The image is floated to the left. */
+    display: block;
+    float: left;
+    opacity: 100%; /* M4LO6: Demonstrate the use of opacity/transparency for images */
+    -webkit-transform: rotateY(180deg); /* M4LO8: Demonstrate the use of transformations for 2D or 3D images (Used a 2D image) */ /* The images are rotated 180 degrees. */
+}
+
+figure { /* M3LO8A: Demonstrate relative positioning */
+    /* The html figures now have a relative position */
+    position: relative;
+    top: 250px;
+    right: 0px;
+}
+
+article > header > h2 { /* M3LO8A: Demonstrate absolute positioning */
+    /* The html h2 now has an absolute position. */
+    position: absolute;
+    top: 420px;
+    right: 500px;
+}
+
+figure { /* M3LO3: Demonstrate a clearing floats */ 
+    /* The nav links are floated center and cleared from the picture. */
+    display: block;
+    float: right;
+    clear: left;
+}
+
+
+
+/* Section Styles */
+
+h1::first-line { /* M2LO11 Pseudo-elements: Demonstrate a pseudo-classes and a pseudo-element selector */ /* M2LO6: Demonstrate a CSS id and a CSS class selector */ /* M2LO7: Demonstrate a CSS attribute selector other than class or id */
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+body { /* M2LO12: Demonstrate how CSS can change presentation of page elements */
+	background-color: rgb(175, 175, 175)
+}
+
+body > p { /* M2LO3 Inheritance: Demonstrate style precedence and inheritance in CSS */ /* M2LO6: Demonstrate a CSS id and a CSS class selector */ /* M2LO5: Demonstrate contextual selectors */
+	font-size: 1em;
+	text-align: center;
+}
+
+h1{
+    font-size: 1em;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+h2 { /* M2LO15: Apply colors using CSS */ /* M2LO3 Precedence: Demonstrate style precedence and inheritance in CSS */
+    color: rgb(255, 255, 74);
+    font-size: 6em;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+    text-shadow: gray 4px 6px 5px ; /* M4LO5: Demonstrate the use of text or box shadowing */ /* Text shadow is added to the h2 element. */
+    background: linear-gradient(grey, black); /* M4LO4: Demonstrate the use of gradients */
+}
+
+*h1 { /* M2LO5: Demonstrate contextual selectors */
+    color: yellow;
+}
+
+body > header > nav ul li {
+	display: inline;
+	padding-right: 25px;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+    color: #ffd900;
+}
+
+nav a:hover { /* M2LO11 Pseudo-class: Demonstrate a pseudo-classes and a pseudo-element selector */
+    color: yellow;
+    background-color: hsla(0, 0%, 42%, 0.7);
+}
+
+figure, p {
+	background-color: rgb(175, 175, 175);
+}
+
+header { /* M2LO15: Apply colors using CSS */ /* M2LO14: Demonstrate and explain the use of progressive enhancement in CSS */
+    background-color: rgb(175, 175, 175);
+    background-color: hsl(0, 0%, 85%);
+    color: white;
+    text-align: center;
+}
+
+img {
+    background-color:  rgb(53, 46, 46);
+}
